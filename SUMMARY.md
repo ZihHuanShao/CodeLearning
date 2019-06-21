@@ -61,6 +61,8 @@
     * [廣告識別碼\(IDFA\)提交錯誤](swift-nian/yu-dao-de/gao-idfa-ti-jiao.md)
     * [Closure retain cycle \(Closure中的\[weak self\]\)](swift-nian/yu-dao-de/closure-retain-cycle-closure-zhong-de-weak-self.md)
     * [Could not instantiate class named WKWebView問題](swift-nian/yu-dao-de/could-not-instantiate-class-named-wkwebview.md)
+    * [安裝cocoapods遇到You don't have write permissions for the /usr/bin directory.](swift-nian/yu-dao-de/an-cocoapods-yu-dao-you-dont-have-write-permissions-for-the-usrbin-directory..md)
+    * [cocoapods反安裝](swift-nian/yu-dao-de/cocoapods-fan-an.md)
 * [SWIFT EXERCISE](exercise-problems/README.md)
   * [LeetCode](exercise-problems/leetcode/README.md)
     * [\#1. Two Sum](exercise-problems/leetcode/two-sum.md)
