@@ -89,27 +89,30 @@
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         session = URLSession(configuration: .default)
-        let imageAddress = "https://pay.google.com/about/static/images/social/knowledge_graph_logo.png"
-        let newTask = session?.downloadTask(with: imageURL, completionHandler: {
+        
+        let url = URL(string: "https://pay.google.com/about/static/images/social/knowledge_graph_logo.png")!
+        let task = session?.downloadTask(with: url, completionHandler: {
             (url, response, error) in
-            if error != nil{
-                print(error!.localizedDescription)
+            if error != nil {
+                print(error?.localizedDescription)
                 return
             }
-            if let loadedURL = url{
+            if let loadedURL = url {
                 do{
                     let loadedImage = UIImage(data: try Data(contentsOf: loadedURL))
                     DispatchQueue.main.async {
                         self.myImageView.image = loadedImage
                     }
-                }catch{
+                }
+                catch {
                     print(error.localizedDescription)
                 }
             }
         })
-        newTask?.resume()
-        }
+        
+        task?.resume()
     }
 ...
 ```
