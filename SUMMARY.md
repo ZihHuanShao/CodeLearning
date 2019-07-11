@@ -78,6 +78,7 @@
     * [\#219. Contains Duplicate II](exercise-problems/leetcode/leetcode-219.-contains-duplicate-ii.md)
     * [\#344. Reverse String](exercise-problems/leetcode/leetcode-344.-reverse-string.md)
     * [\#345. Reverse Vowels of a String](exercise-problems/leetcode/leetcode-345.-reverse-vowels-of-a-string.md)
+  * [Int 轉 String](exercise-problems/int-zhuan-string.md)
   * [Set與Array的相互轉換](exercise-problems/setarray-de-xiang-hu.md)
   * [字串反轉](exercise-problems/zi-chuan-fan.md)
   * [陣列中的陣列排序](exercise-problems/lie-zhong-de-lie-pai-xu.md)
