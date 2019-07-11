@@ -46,6 +46,7 @@
   * [Facebook SDK for Login](study/facebook-sdk-for-login.md)
   * [如何將文章分享至其他應用程式\(Social & UIActivityViewController\)](study/ru-he-jiang-wen-zhang-fen-xiang-zhi-qi-ta-ying-yong-cheng-shi-social-uiactivityviewcontroller.md)
   * [UserDefaults存取自訂型別](study/userdefaults-cun-qu-zi-ding-xing-bie.md)
+  * [宣告URL變數](study/xuan-gao-url-bian-shu.md)
 * [Swift 觀念 & 問題](swift-nian/README.md)
   * [基礎觀念](swift-nian/ji-nian/README.md)
     * [UIView](swift-nian/ji-nian/uiview.md)
