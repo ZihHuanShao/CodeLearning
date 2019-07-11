@@ -89,4 +89,7 @@
   * [static的意義  \(C/ C++\)](qi-ta/static-de-yi-cc++.md)
   * [ObjC: enumerateObjectsUsingBlock](qi-ta/objc.md)
 * [iOS 11 SDK新功能](ios-11-sdk-xin-gong-neng.md)
+* [取得file檔案大小](qu-de-file-dang-an-da-xiao.md)
+* [Share extension: couldn’t be opened because you don’t have permission to view it.](untitled.md)
+* [Raw value & Hash value](raw-value-and-hash-value.md)
 
