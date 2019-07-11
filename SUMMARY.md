@@ -65,6 +65,8 @@
     * [Could not instantiate class named WKWebView問題](swift-nian/yu-dao-de/could-not-instantiate-class-named-wkwebview.md)
     * [安裝cocoapods遇到You don't have write permissions for the /usr/bin directory.](swift-nian/yu-dao-de/an-cocoapods-yu-dao-you-dont-have-write-permissions-for-the-usrbin-directory..md)
     * [cocoapods反安裝](swift-nian/yu-dao-de/cocoapods-fan-an.md)
+* [SWIFT News](swift-news/README.md)
+  * [iOS 11 SDK新功能](swift-news/ios-11-sdk-xin-gong-neng.md)
 * [SWIFT EXERCISE](exercise-problems/README.md)
   * [LeetCode](exercise-problems/leetcode/README.md)
     * [\#1. Two Sum](exercise-problems/leetcode/two-sum.md)
@@ -88,7 +90,8 @@
   * [mac: FB發文如何「空格」及「換行」](qi-ta/mac-fb-wen-ru-he-kong-ge-ji-hang.md)
   * [static的意義  \(C/ C++\)](qi-ta/static-de-yi-cc++.md)
   * [ObjC: enumerateObjectsUsingBlock](qi-ta/objc.md)
-* [iOS 11 SDK新功能](ios-11-sdk-xin-gong-neng.md)
 * [取得file檔案大小](qu-de-file-dang-an-da-xiao.md)
 * [Share extension: couldn’t be opened because you don’t have permission to view it.](untitled.md)
+* [Share Extension](share-extension.md)
+* [Swift檔案路徑](swift-dang-an-lu-jing.md)
 
