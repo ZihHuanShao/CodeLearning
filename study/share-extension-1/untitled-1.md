@@ -5,7 +5,7 @@
 item = 來源檔案，App端 = Container App 
 
 1. **處理端 = 接收端\(extension\)**  逐一針對每一個item的type做相對應的處理，然後一個一個寫進Group space  EX：分享網頁➔存網址、圖片➔轉`Data`存或直接寫入圖片檔
-2. **處理端 = 呈現端\(App端\)**  建立一個`struct`物件，將所有item的資訊（url、name、type、size）存到該物件，再一次寫進Group space
+2. **處理端 = 呈現端\(App端\)**  建立一個`struct`物件，將所有item的資訊（`url`、`name`、`type`、`size`）存到該物件，再一次寫進Group space
 3. **回到沒有權限問題**
 4. **解決3後再回到2.** 有寫入權限但App端沒有讀檔權限
 5. **解決3.後再回到1.** App端順利讀檔
@@ -120,6 +120,23 @@ fileURL.stopAccessingSecurityScopedResource()
   在解決沒有寫入權限問題後，單純轉成`Data`型別就可以寫入了，也不用特地對item做編碼才能寫入
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 目前作法
+
+1. 保留第2種方式，但每一筆`FileObject`只保留`name`、`type`、`size`，因為URL必須在接收端處理，所以就捨棄。`FileObject`陣列會當作App端顯示所有資料的依據
+2. 保留第1種方式，也就是針對每一個item做資料處理，處理完再寫入Group space
 
 
 
