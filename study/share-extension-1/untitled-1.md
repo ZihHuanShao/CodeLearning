@@ -49,11 +49,10 @@ userDefault.set(data!, forKey: "image")
   * 直接寫入圖片檔➔ 成功寫入 **讀取端**：沒有權限讀取❎
 
 ```swift
+let tmpData = try? Data(contentsOf: url)
 let imagePath = shareUrl.appendingPathComponent(url.lastPathComponent)
-try? UIImage(named: url.lastPathComponent)?.jpegData(compressionQuality: 1)?.write(to: imagePath)
+try? tmpData!.write(to: imagePath)
 ```
-
-\*\*\*\*
 
 ### 2. **處理端 = 呈現端\(App端\)**
 
@@ -121,6 +120,11 @@ fileURL.stopAccessingSecurityScopedResource()
 
 
 
+#### 寫入方式`FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YourSuiteName")`
+
+* 測項：圖片
+  * 直接寫入圖片檔➔ 成功寫入 **讀取端**：成功讀取✅
+
 
 
 
@@ -137,8 +141,8 @@ fileURL.stopAccessingSecurityScopedResource()
 
 同時保留第1種及第2種方式：
 
-* 第2種方式： 每一筆`FileObject`只保留`name`、`type`、`size`，因為URL必須在接收端處理，所以就捨棄。`FileObject`陣列會當作App端顯示所有資料的依據
-* 第1種方式： 也就是針對每一個item做資料處理，處理完再寫入Group space
+* 第2種： 每一筆`FileObject`只保留`name`、`type`、`size`，因為URL必須在接收端處理，所以就捨棄。`FileObject`陣列會當作App端顯示所有資料的依據
+* 第1種： 也就是針對每一個item做資料處理，處理完寫入Group space
 
 
 
