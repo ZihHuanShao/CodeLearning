@@ -7,8 +7,8 @@ item = 來源檔案，App端 = Container App
 1. **處理端 = 接收端\(extension\)**  逐一針對每一個item的type做相對應的處理，然後一個一個寫進Group space  EX：分享網頁➔存網址、圖片➔轉`Data`存或直接寫入圖片檔
 2. **處理端 = 呈現端\(App端\)**  建立一個`struct`物件，將所有item的資訊（url、name、type、size）存到該物件，再一次寫進Group space
 3. **回到沒有權限問題**
-4. **解決3後再試2.** 有寫入權限但App端沒有讀檔權限
-5. **解決3後再試1.** App端順利讀檔
+4. **解決3後再回到2.** 有寫入權限但App端沒有讀檔權限
+5. **解決3.後再回到1.** App端順利讀檔
 
 ### 
 
@@ -93,13 +93,31 @@ userDefault!.set(data, forKey: storeKey)
 
 {% page-ref page="untitled.md" %}
 
+因此，最後解決方法是在對URL操作的前後加上兩段code
+
+```swift
+fileURL.startAccessingSecurityScopedResource()
+...
+fileURL.stopAccessingSecurityScopedResource()
+```
 
 
-### 4. 解決3.後再試2.
+
+### 4. 解決3.後再回到2.
+
+讀取端一樣能夠讀取成功。但對`FileObject`取出來的URL操作時，一樣沒有權限可以使用
 
 
 
+### 5. **解決3.後再回到1.**
 
+#### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")` 
+
+* 測項：圖片
+
+  * 轉成`Data`型別寫入，`let imageData = try? Data(contentsOf: url)`➔ 成功寫入沒有權限操作 **讀取端**：讀取成功✅
+
+  在解決沒有寫入權限問題後，單純轉成`Data`型別就可以寫入了，也不用特地對item做編碼才能寫入
 
 
 

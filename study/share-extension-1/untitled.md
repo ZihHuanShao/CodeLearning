@@ -2,7 +2,7 @@
 
 ## 發生情況
 
-當`extension`端想要對接收到的檔案的url做操作（如：`try Data(contentsOf: url)`），都會發生`Code = 257 "The file "XXX.JPG" couldn’t be opened because you don’t have permission to view it."`
+當`extension`端想要對接收到的檔案的url做操作（如：`try Data(contentsOf: url)`），都會發生`Code = 257 "The file "XXX.JPG" couldn’t be opened because you don’t have permission to view it."`這邊我列出覺得可能比較有幫助的解決方法：
 
 ###  解決方案 1
 
@@ -20,11 +20,11 @@
 
 ### 解決方案 3
 
-最後是透過這個方法解決
+最後是這個方法能解決我的問題，在對URL操作的前後加上兩段code
 
 ```swift
 fileURL.startAccessingSecurityScopedResource()
-//...
+...
 fileURL.stopAccessingSecurityScopedResource()
 ```
 
