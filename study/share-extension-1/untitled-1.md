@@ -135,8 +135,10 @@ fileURL.stopAccessingSecurityScopedResource()
 
 ### 目前作法
 
-1. 保留第2種方式，但每一筆`FileObject`只保留`name`、`type`、`size`，因為URL必須在接收端處理，所以就捨棄。`FileObject`陣列會當作App端顯示所有資料的依據
-2. 保留第1種方式，也就是針對每一個item做資料處理，處理完再寫入Group space
+同時保留第1種及第2種方式：
+
+* 第2種方式： 每一筆`FileObject`只保留`name`、`type`、`size`，因為URL必須在接收端處理，所以就捨棄。`FileObject`陣列會當作App端顯示所有資料的依據
+* 第1種方式： 也就是針對每一個item做資料處理，處理完再寫入Group space
 
 
 
