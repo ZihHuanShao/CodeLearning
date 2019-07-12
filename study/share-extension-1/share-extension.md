@@ -1,4 +1,4 @@
-# Share Extension
+# Share Extension介紹
 
 ## Extension？
 
@@ -65,11 +65,11 @@
 
 建立Target
 
-![](.gitbook/assets/ying-mu-kuai-zhao-20190711-shang-wu-10.18.05.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190711-shang-wu-10.18.05.png)
 
 選擇Share Extension
 
-![](.gitbook/assets/ying-mu-kuai-zhao-20190711-shang-wu-10.18.24.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190711-shang-wu-10.18.24.png)
 
 建立完後，到Project的左側欄位，選擇**Capabilities**，開啟**App Group**功能，Container App（EX: **ShareExtensionTest**）與extension端（EX: **ShareExtension**）都要啟用。
 
