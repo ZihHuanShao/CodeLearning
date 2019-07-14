@@ -76,7 +76,7 @@ do{
 參考API範例：[https://openweathermap.org/current](https://openweathermap.org/current)  
 要解析的`JSON`資料，此為天氣預報API回傳的資訊如下：
 
-![](../.gitbook/assets/ying-mu-kuai-zhao-20190402-shang-wu-12.09.19.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190402-shang-wu-12.09.19.png)
 
 ```swift
 // 定義欲抓取的資訊
