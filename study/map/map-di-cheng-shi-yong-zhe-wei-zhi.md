@@ -5,15 +5,15 @@
 3. 匯入函式庫`import CoreLocation // 為了取得使用者位置`
 4.  勾選
 
-   ![](../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.15.23.png)
+   ![](../../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.15.23.png)
 
 5. 取得使用者位置必須取得隱私權受權，plist檔加入  
 
-   ![](../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.22.45.png)
+   ![](../../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.22.45.png)
 
 6. 執行測試時可用內建模擬方法  
 
-   ![](../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.41.22.png)
+   ![](../../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-8.41.22.png)
 
 
 

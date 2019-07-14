@@ -2,14 +2,14 @@
 
 ## 顯示地圖
 
-1. 需要使用**Map Kit View** Library![](../.gitbook/assets/map.png)
+1. 需要使用**Map Kit View** Library![](../../.gitbook/assets/map.png)
 2. 匯入函式庫`import MapKit` 
 
 ## 其他顯示項目
 
 取得手指長按的位置與座標
 
-![](../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-7.54.56.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190327-xia-wu-7.54.56.png)
 
 ## 顯示特定區域
 
