@@ -8,6 +8,16 @@
 
 之前很納悶為什麼單純寫入時會一直出現error，很疑惑也找不出解決之道，找了很久終於發現這篇文章，感謝作者^^
 
+作者頁面的`struct`要注意，需加上遵循`Codable`：
+
+```swift
+struct User: Codable {
+    var ID: String
+    var name: String
+    var email: String?
+}
+```
+
 {% embed url="https://archie.tw/2018/08/15/userdefaults-with-structure/" %}
 
 
