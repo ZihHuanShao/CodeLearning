@@ -34,7 +34,7 @@ UserDefaults.standard.set(userArr, forKey: "USER")
 
 會產生以下error  
 
-![](../.gitbook/assets/ying-mu-kuai-zhao-20190527-xia-wu-2.00.54.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190527-xia-wu-2.00.54.png)
 
 #### 改善
 

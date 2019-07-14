@@ -4,11 +4,11 @@
 
 其中`set`提供多種**存放**資料的格式：
 
-![](../.gitbook/assets/wei-ming-ming%20%284%29.png)
+![](../../.gitbook/assets/wei-ming-ming%20%284%29.png)
 
 `value`提供**讀取**的格式：
 
-![](../.gitbook/assets/wei-ming-ming.png)
+![](../../.gitbook/assets/wei-ming-ming.png)
 
 ## 範例
 
