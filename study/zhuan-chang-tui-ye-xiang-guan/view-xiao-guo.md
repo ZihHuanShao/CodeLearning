@@ -22,7 +22,7 @@ navigationController?.pushViewController(lightRed, animated: true)
 
 透過`segue`來設定，圖中左邊箭頭指的地方就代表`segue`，右邊可以設定該`segue`的名稱。再使用`performSegue()`要呈現哪個`segue`來套用。
 
-![](../.gitbook/assets/tu-pian-1%20%281%29.png)
+![](../../.gitbook/assets/tu-pian-1%20%281%29.png)
 
 ```swift
 // 1. 由下至上顯示
