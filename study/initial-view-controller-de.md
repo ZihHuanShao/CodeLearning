@@ -1,6 +1,6 @@
 # initial view controller的選擇
 
-### 設計情況
+## 設計情景
 
 第一次啟動APP ➡︎ `FirstViewController`  
 已登入過APP ➡︎ `SecondViewController`

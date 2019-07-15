@@ -1,4 +1,4 @@
-# Files App \(檔案\)：關於Import files
+# Files App：關於Import files
 
 ## 前言
 
@@ -41,13 +41,13 @@
 
 首先，必須先開啟支援`Document`的權限：
 
-![](.gitbook/assets/ying-mu-kuai-zhao-20190715-shang-wu-11.08.29.png)
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190715-shang-wu-11.08.29.png)
 
 開啟權限之後，在「**檔案**」App就看得到自己的App了（我的是：easyShare）
 
-![](.gitbook/assets/img-2164.png)
+![](../../.gitbook/assets/img-2164.png)
 
-![&#x4E00;&#x958B;&#x59CB;&#x6C92;&#x6709;&#x4EFB;&#x4F55;&#x8CC7;&#x6599;](.gitbook/assets/img-2165.JPG)
+![&#x4E00;&#x958B;&#x59CB;&#x6C92;&#x6709;&#x4EFB;&#x4F55;&#x8CC7;&#x6599;](../../.gitbook/assets/img-2165.JPG)
 
 
 
@@ -77,7 +77,7 @@
 
 開啟「**檔案**」App，可看到剛剛寫入的檔已經被寫入了
 
-![](.gitbook/assets/unnamed.jpg)
+![](../../.gitbook/assets/unnamed.jpg)
 
 ### 從Files App匯入
 
@@ -173,17 +173,17 @@ extension ViewController: UIDocumentPickerDelegate {
 }
 ```
 
-![&#x900F;&#x904E;&#x6309;&#x9215;ImportDoc&#x4F86;&#x53EB;&#x51FA;&#x6A94;&#x6848;&#x756B;&#x9762;](.gitbook/assets/img-2167.png)
+![&#x900F;&#x904E;&#x6309;&#x9215;ImportDoc&#x4F86;&#x53EB;&#x51FA;&#x6A94;&#x6848;&#x756B;&#x9762;](../../.gitbook/assets/img-2167.png)
 
 
 
-![&#x9078;&#x64C7;&#x6211;&#x8981;&#x532F;&#x5165;&#x54EA;&#x500B;&#x8CC7;&#x6599;&#x593E;](.gitbook/assets/img-2168%20%281%29.png)
+![&#x9078;&#x64C7;&#x6211;&#x8981;&#x532F;&#x5165;&#x54EA;&#x500B;&#x8CC7;&#x6599;&#x593E;](../../.gitbook/assets/img-2168%20%281%29.png)
 
 
 
-![&#x9078;&#x64C7;&#x6211;&#x8981;&#x532F;&#x5165;&#x54EA;&#x4E9B;&#x6A94;&#x6848;](.gitbook/assets/img-2169.png)
+![&#x9078;&#x64C7;&#x6211;&#x8981;&#x532F;&#x5165;&#x54EA;&#x4E9B;&#x6A94;&#x6848;](../../.gitbook/assets/img-2169.png)
 
 
 
-![&#x7D50;&#x679C;&#x986F;&#x793A;&#x6211;&#x532F;&#x5165;&#x4E86;&#x54EA;&#x4E9B;&#x6A94;](.gitbook/assets/img-2171.JPG)
+![&#x7D50;&#x679C;&#x986F;&#x793A;&#x6211;&#x532F;&#x5165;&#x4E86;&#x54EA;&#x4E9B;&#x6A94;](../../.gitbook/assets/img-2171.JPG)
 
