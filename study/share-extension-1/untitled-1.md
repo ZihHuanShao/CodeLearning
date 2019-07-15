@@ -2,11 +2,11 @@
 
 ## Study progress ...
 
-item = 來源檔案，App端 = Container App 
-
 {% hint style="warning" %}
-遇到的瓶頸：只要對item的`url`做處理，就會發生沒有權限可以操作的狀況
+遇到的瓶頸：只要對來源檔案的`url`做處理，就會發生沒有權限可以操作的狀況
 {% endhint %}
+
+item = 來源檔案，App端 = Container App 
 
 1. **處理端 = 接收端\(extension\)**  逐一針對每一個item的type做相對應的處理，然後一個一個寫進Group space  EX：分享網頁➔存網址、圖片➔轉`Data`存或直接寫入圖片檔 
 2. **處理端 = 呈現端\(App端\)**  建立一個`struct`物件，將所有item的資訊（`url`、`name`、`type`、`size`）存到該物件，再一次寫進Group space 

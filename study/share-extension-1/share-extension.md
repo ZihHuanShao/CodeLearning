@@ -23,7 +23,7 @@
 
 
 
-![](../../.gitbook/assets/detailed_communication_2x.png)
+![](../../.gitbook/assets/detailed_communication_2x%20%282%29.png)
 
 ## Share Extension介紹
 
