@@ -32,6 +32,9 @@
   * [取得打電話的狀態](study/qu-de-da-de.md)
   * [實作checkbox](study/zuo-checkbox.md)
   * [initial view controller的選擇](study/initial-view-controller-de.md)
+  * [IO相關](study/io-xiang-guan/README.md)
+    * [Swift檔案路徑](study/io-xiang-guan/swift-dang-an-lu-jing.md)
+    * [取得file檔案大小](study/io-xiang-guan/qu-de-file-dang-an-da-xiao.md)
   * [UserDefault](study/userdefault/README.md)
     * [UserDefaults 存資料至手機](study/userdefault/untitled-1.md)
     * [UserDefaults無法存取客製化的struct](study/userdefault/userdefaults-fa-cun-qu-ke-hua-de-struct.md)
@@ -104,7 +107,5 @@
   * [mac: FB發文如何「空格」及「換行」](qi-ta/mac-fb-wen-ru-he-kong-ge-ji-hang.md)
   * [static的意義  \(C/ C++\)](qi-ta/static-de-yi-cc++.md)
   * [ObjC: enumerateObjectsUsingBlock](qi-ta/objc.md)
-* [取得file檔案大小](qu-de-file-dang-an-da-xiao.md)
-* [Swift檔案路徑](swift-dang-an-lu-jing.md)
 * [Unexpectedly found nil while unwrapping an Optional value 關於storyboard推頁](unexpectedly-found-nil-while-unwrapping-an-optional-value-guan-wu-storyboard-tui-ye.md)
 
