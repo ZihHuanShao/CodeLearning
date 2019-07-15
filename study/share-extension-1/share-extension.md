@@ -16,12 +16,14 @@
 
 ### Extension在App的角色定位？
 
-![](../../.gitbook/assets/detailed_communication_2x.png)
-
 * Extension是一個App的附加功能，因此，想要有extension功能，必須依附在一個主要的project App底下，而這個被依附的Project App稱之為**Containing app**
 * Extension的存在會隨著App的安裝或移除決定
 
-![Share Extension&#x5DE5;&#x4F5C;&#x74B0;&#x5883;](https://github.com/ZihHuanShao/For-mkFile-Use/blob/master/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-04%20%E4%B8%8A%E5%8D%8810.01.25.png?raw=true)
+![Share Extension&#x5728;XCode&#x5DE5;&#x4F5C;&#x74B0;&#x5883;](https://github.com/ZihHuanShao/For-mkFile-Use/blob/master/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202019-07-04%20%E4%B8%8A%E5%8D%8810.01.25.png?raw=true)
+
+
+
+![](../../.gitbook/assets/detailed_communication_2x.png)
 
 ## Share Extension介紹
 
@@ -42,12 +44,29 @@
   * `NSExtensionActivationSupportsText` 
   * `NSExtensionActivationSupportsWebURLWithMaxCount`
   * `NSExtensionActivationSupportsWebPageWithMaxCount`
+
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190715-xia-wu-3.35.24.png)
+
 * 例如：若我只想允許接收分享**網頁連結**的類型，就只新增`NSExtensionActivationSupportsWebURLWithMaxCount`屬性並設定其數量
 * `NSExtensionActivationSupportsAttachmentsWithMaxCount`：附件最多數量限制。附件類型包括File、Image、movie，可以單一、可以複選，但總數量不得超過指定數量
 
 ### 提供的預設介面
 
 會有一個預設畫面、一個**Cancel**按鈕、一個**Post**按鈕 ![](https://github.com/ZihHuanShao/For-mkFile-Use/blob/master/shareExt_default.png?raw=true)
+
+
+
+### 提供的實作方式
+
+一開始主要提供基本的三個函式讓我們實作：
+
+* `isContentValid`
+* `didSelectPost`
+* `configurationItems`
+
+![](../../.gitbook/assets/ying-mu-kuai-zhao-20190715-xia-wu-3.49.47.png)
+
+
 
 ### 由誰來處理其他App傳過來的資料？
 
