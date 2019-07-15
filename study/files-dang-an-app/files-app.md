@@ -2,7 +2,7 @@
 
 ## 前言
 
-在iOS11以前，APP之間的檔案系統是獨立的，無法互通，而且也會造成使用者在瀏覽檔案的困擾。在iOS11之後，蘋果加入了一個可以管理手機內部所有檔案的新工具：**Files（檔案）** App
+在iOS11以前，APP之間的檔案系統是獨立的，無法互通，而且也會造成使用者在瀏覽檔案的困擾。在iOS11之後，蘋果加入了一個可以管理手機內部所有檔案的內建App：**Files（檔案）**
 
 使用類別：
 
@@ -26,7 +26,7 @@
 
 {% embed url="https://eclecticlight.co/2018/01/24/file-types-the-uti-and-even-more-metadata/" caption="參考方法" %}
 
-另外，在XCode底下若要使用`kUTTypeXXXX`，必須要`import MobileCoreServices`才能取得
+在XCode底下若要使用`kUTTypeXXXX`，必須要`import MobileCoreServices`才能取得
 
 ### File Browser：檔案瀏覽者的角色
 
@@ -34,7 +34,7 @@
 
 ### File Provider：檔案提供者的角色
 
-允許其他APP使用`UIDocumentPickerViewController`類別來取得裝置內部的所有資料，並會將選擇的資料匯入到此APP中，這也代表該資料會被複製一份，而原始檔則確保不會被更動到  
+允許APP使用`UIDocumentPickerViewController`類別來取得裝置內部的所有檔案，並會將選擇的檔案匯入到此APP中，這也代表該資料會被複製一份，而原始檔則確保不會被更動到  
 
 
 ## Import files
@@ -43,7 +43,7 @@
 
 ![](../../.gitbook/assets/ying-mu-kuai-zhao-20190715-shang-wu-11.08.29.png)
 
-開啟權限之後，在「**檔案**」App就看得到自己的App了（我的是：easyShare）
+開啟權限之後，開啟「**檔案**」App就看得到自己的project name了（我的是：easyShare）
 
 ![](../../.gitbook/assets/img-2164.png)
 
@@ -79,9 +79,9 @@
 
 ![](../../.gitbook/assets/unnamed.jpg)
 
-### 從Files App匯入
+### 如何透過Files App匯入檔案
 
-要開啟類似檔案總管的畫面，就要先建立`UIDocumentPickerViewController`實體，並呼叫`present`方法來產生
+要開啟類似檔案總管的畫面，就要先建立`UIDocumentPickerViewController`實體，並呼叫`present`方法來產生畫面
 
 ```swift
 @IBAction func importDocBtn(_ sender: Any) {
@@ -177,7 +177,7 @@ extension ViewController: UIDocumentPickerDelegate {
 
 
 
-![&#x9078;&#x64C7;&#x6211;&#x8981;&#x532F;&#x5165;&#x54EA;&#x500B;&#x8CC7;&#x6599;&#x593E;](../../.gitbook/assets/img-2168%20%281%29.png)
+![&#x9078;&#x64C7;&#x6211;&#x8981;&#x5F9E;&#x54EA;&#x500B;&#x8CC7;&#x6599;&#x593E;&#x532F;&#x5165;](../../.gitbook/assets/img-2168%20%281%29.png)
 
 
 
