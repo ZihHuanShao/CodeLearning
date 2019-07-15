@@ -128,7 +128,7 @@ fileURL.stopAccessingSecurityScopedResource()
 
   在接收端利用`FileObject`物件陣列，來當作在App端顯示所有資料的依據  
 
-* 第1種：**處理端 = 接收端\(extension\)** 因為URL必須在接收端處理，所以就不同類型的檔案必須先做資料處理，處理完寫入Group space
+* 第1種：**處理端 = 接收端\(extension\)** 因為item的URL必須在接收端處理，所以就不同類型的檔案必須先做資料處理，處理完寫入Group space
 
 
 
