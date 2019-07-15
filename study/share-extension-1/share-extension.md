@@ -42,7 +42,8 @@
   * `NSExtensionActivationSupportsText` 
   * `NSExtensionActivationSupportsWebURLWithMaxCount`
   * `NSExtensionActivationSupportsWebPageWithMaxCount`
-* EX：若我只想允許接收分享連結的類型，就新增`NSExtensionActivationSupportsWebURLWithMaxCount`屬性並設定其數量
+* 例如：若我只想允許接收分享**網頁連結**的類型，就只新增`NSExtensionActivationSupportsWebURLWithMaxCount`屬性並設定其數量
+* `NSExtensionActivationSupportsAttachmentsWithMaxCount`：附件最多數量限制。附件類型包括File、Image、movie，可以單一、可以複選，但總數量不得超過指定數量
 
 ### 提供的預設介面
 
