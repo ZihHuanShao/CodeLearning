@@ -63,10 +63,10 @@ try? tmpData!.write(to: imagePath)
 
 ```swift
 struct FileObject: Codable {
-    let name: String
-    let type: ContentType
-    let url:  URL
-    let size: UInt64
+    let name: String        // 檔名
+    let type: ContentType   // 檔案類型
+    let url:  URL           // URL
+    let size: UInt64        // 檔案大小
 }
 ```
 
