@@ -16,6 +16,8 @@
 
 ### Extension在App的角色定位？
 
+![](../../.gitbook/assets/detailed_communication_2x.png)
+
 * Extension是一個App的附加功能，因此，想要有extension功能，必須依附在一個主要的project App底下，而這個被依附的Project App稱之為**Containing app**
 * Extension的存在會隨著App的安裝或移除決定
 

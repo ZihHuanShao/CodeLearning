@@ -1,4 +1,4 @@
-# Files App
+# Files App \(Import files\)
 
 ## 前言
 
@@ -14,7 +14,7 @@
 
 #### 方法
 
-在指令列輸入 `mdls -name kMDItemContentType "你的路徑/XXX.plist"`，回傳結果就是UTI型別
+在指令列輸入 `mdls -name kMDItemContentType 你的檔案`，回傳結果就是UTI型別
 
 {% embed url="https://eclecticlight.co/2018/01/24/file-types-the-uti-and-even-more-metadata/" caption="參考方法" %}
 
