@@ -25,6 +25,13 @@
 
 ![](../../.gitbook/assets/detailed_communication_2x%20%282%29.png)
 
+
+
+* Host app：user透過哪個app（也可以是本機照片或本機檔案）分享檔案給我的app，稱之
+* App extension：由extension負責**接收**傳進來的檔案
+* Containing app：主要開發的project app，負責想要如何對外呈現
+* Shared resources:：extension與Containing app透過蘋果提供的一個group space，透過這個space來讓Containing app存取extension所接收到的資源
+
 ## Share Extension介紹
 
 ### 使用情景
@@ -67,12 +74,6 @@
 ![](../../.gitbook/assets/ying-mu-kuai-zhao-20190715-xia-wu-3.49.47.png)
 
 
-
-### 由誰來處理其他App傳過來的資料？
-
-* 其他的app端之稱為**Host App**，Host App按下Post之後，**extension**端會把資料取出並傳給**Containing app**做後續如何呈現，而處理端就看要設計放在哪一端
-  * extension：接收端
-  * Containing App：呈現端 
 
 ### 怎麼將資料傳給Containing App
 
