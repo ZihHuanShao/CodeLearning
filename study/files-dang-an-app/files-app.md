@@ -28,11 +28,11 @@
 
 在XCode底下若要使用`kUTTypeXXXX`，必須要`import MobileCoreServices`才能取得
 
-### File Browser：檔案瀏覽者的角色
+### `UIDocumentBrowserViewController`
 
-`UIDocumentBrowserViewController`是一種型別，就像整數`Int`，布林值`Bool`，而它代表的意義是一個App的類型。比方說，我想要我自己開發的App能夠被其他App瀏覽的話，就必須實作該類別，來定義自己的APP屬於什麼型別
+`UIDocumentBrowserViewController`是一種型別，就像整數`Int`，布林值`Bool`，文字檔`txt`，而它代表的意義是一個App的類型。比方說，我想要我自己開發的App能夠被其他App瀏覽的話，就必須實作該類別，來定義自己的APP屬於什麼格式的檔案型別
 
-### File Provider：檔案提供者的角色
+### `UIDocumentPickerViewController`
 
 允許APP使用`UIDocumentPickerViewController`類別來取得裝置內部的所有檔案，並會將選擇的檔案匯入到此APP中，這也代表該資料會被複製一份，而原始檔則確保不會被更動到  
 

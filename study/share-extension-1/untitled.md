@@ -1,4 +1,4 @@
-# Share extension: couldn’t be opened because you don’t have permission to view it.
+# 沒有權限Share extension: couldn’t be opened because you don’t have permission to view it.
 
 ## 發生情況
 

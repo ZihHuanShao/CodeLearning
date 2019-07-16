@@ -27,7 +27,7 @@
 
 * Host app：user透過哪個app（也可以是本機照片或本機檔案）分享檔案給我的app，稱之
 * App extension：由extension負責**接收**傳進來的檔案
-* Containing app：主要開發的project app，負責想要如何對外呈現
+* Containing app：主要開發的project app，負責將資料如何對外呈現
 * Shared resources:：extension與Containing app透過蘋果提供的一個group space，透過這個space來讓Containing app存取extension所接收到的資源
 
 ## Share Extension介紹
