@@ -69,7 +69,7 @@ struct FileObject: Codable {
 
 ### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")`
 
-* 蒐集到的每一筆item物件全部存到一個`fileObject`陣列，再透過對陣列的編碼，寫到Group space➔ 成功寫入 **讀取端**：成功讀取✅
+* 蒐集到的每一筆item物件全部存到一個陣列，再透過對陣列的編碼，寫到Group space➔ 成功寫入 **讀取端**：成功讀取✅
 
 ```swift
 try? PropertyListEncoder().encode(data as! [FileObject])
