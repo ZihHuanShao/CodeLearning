@@ -30,5 +30,52 @@ fileURL.stopAccessingSecurityScopedResource()
 
 {% embed url="https://stackoverflow.com/questions/36355105/the-file-couldn-t-be-opened-because-you-don-t-have-permission-to-view-it?rq=1" %}
 
+## 解決的案例
 
+名詞解釋，以開發者角度而言：
+
+* Extension：**接收**從其他App分享過來的檔案，以下簡稱Ext
+* Containing App：將接收到的檔案做怎樣的**呈現**，以下簡稱CA
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">&#x64CD;&#x4F5C;&#x7AEF;</th>
+      <th style="text-align:left">&#x6C92;&#x6709;&#x6B0A;&#x9650;&#x7684;&#x64CD;&#x4F5C;</th>
+      <th style="text-align:center">&#x6A94;&#x6848;&#x985E;&#x578B;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">Ext</td>
+      <td style="text-align:left"><code>try? Data(contentsOf: data as! URL)</code>
+      </td>
+      <td style="text-align:center">&#x5716;&#x7247;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Ext</td>
+      <td style="text-align:left">
+        <p><code>let tmpData = try? Data(contentsOf: data as! URL)</code>
+        </p>
+        <p><code>let data = try? propertyListEncoder().encode(tmpData!)</code>
+        </p>
+      </td>
+      <td style="text-align:center">&#x5716;&#x7247;&#x3001;Zip</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">CA</td>
+      <td style="text-align:left">
+        <p><code>if let shareUrl = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: yourSuiteName) {</code>
+        </p>
+        <p><code>  let imagePath = shareUrl.appendingPathComponent(&quot;test.JPG&quot;)</code>
+        </p>
+        <p><code>  let image = UIImage(contentsOfFile: imagePath.path)</code>
+        </p>
+        <p><code>}</code>
+        </p>
+      </td>
+      <td style="text-align:center">&#x5716;&#x7247;</td>
+    </tr>
+  </tbody>
+</table>
 

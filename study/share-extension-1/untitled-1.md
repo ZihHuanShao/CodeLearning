@@ -6,7 +6,7 @@
 遇到的瓶頸：只要對來源檔案的`url`做處理，就會發生沒有權限可以操作的狀況
 {% endhint %}
 
-item = 來源檔案，App端 = Container App 
+item = 來源檔案，App端 = Container App
 
 1. **處理端 = 接收端\(extension\)**  逐一針對每一個item的type做相對應的處理，然後一個一個寫進Group space  EX：分享網頁➔存網址、圖片➔轉`Data`存或直接寫入圖片檔 
 2. **處理端 = 呈現端\(App端\)**  建立一個`struct`物件，將所有item的資訊（`url`、`name`、`type`、`size`）存到該物件，再一次寫進Group space 
@@ -14,20 +14,17 @@ item = 來源檔案，App端 = Container App
 4. **解決3後再回到2.** 有寫入權限但App端沒有讀檔權限 
 5. **解決3.後再回到1.** App端順利讀檔
 
-### 
-
 ## **1. 處理端 = 接收端\(extension\)**
 
-接收端會針對每一個item做資料處理，處理完再寫入Group space  
+接收端會針對每一個item做資料處理，處理完再寫入Group space
 
+### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")`
 
-#### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")` 
+* 測項：網頁URL
 
-* 測項：網頁URL 
+  * `userDefault?.set(url, forKey: "url")`➔ 成功寫入
 
-  *  `userDefault?.set(url, forKey: "url")`➔ 成功寫入
-
-  **讀取端**：成功讀取✅  
+  **讀取端**：成功讀取✅
 
 * 測項：圖片
   * 轉成`Data`型別寫入：`let imageData = try? Data(contentsOf: url)`➔ 沒有權限操作 **讀取端**：None 
@@ -44,7 +41,7 @@ userDefault.set(data!, forKey: "image")
 * 測項：其他類型檔案如ZIP檔
   * 轉成`Data`型別，再透過`PropertyListEncoder().encode`編碼再寫入➔ 沒有權限操作 **讀取端**：None 
 
-#### 寫入方式`FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YourSuiteName")`
+### 寫入方式`FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YourSuiteName")`
 
 * 測項：圖片
   * 直接寫入圖片檔➔ 成功寫入 **讀取端**：沒有權限讀取❎
@@ -63,16 +60,16 @@ try? tmpData!.write(to: imagePath)
 
 ```swift
 struct FileObject: Codable {
-    let name: String        // 檔名
-    let type: ContentType   // 檔案類型
-    let url:  URL           // URL
-    let size: UInt64        // 檔案大小
+    let name: String
+    let type: ContentType
+    let url:  URL
+    let size: UInt64
 }
 ```
 
-#### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")` 
+### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")`
 
-* 蒐集到的每一筆item物件全部存到一個陣列，再透過對陣列的編碼，寫到Group space➔ 成功寫入 **讀取端**：成功讀取✅
+* 蒐集到的每一筆item物件全部存到一個`fileObject`陣列，再透過對陣列的編碼，寫到Group space➔ 成功寫入 **讀取端**：成功讀取✅
 
 ```swift
 try? PropertyListEncoder().encode(data as! [FileObject])
@@ -103,7 +100,7 @@ fileURL.stopAccessingSecurityScopedResource()
 
 ## 5. **解決3.後再回到1.**
 
-#### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")` 
+### 寫入方式`UserDefaults.init(suiteName: "YourSuiteName")`
 
 * 測項：圖片
 
@@ -111,14 +108,10 @@ fileURL.stopAccessingSecurityScopedResource()
 
   在解決沒有寫入權限問題後，單純轉成`Data`型別就可以寫入了，也不用特地對item做編碼才能寫入
 
-
-
-#### 寫入方式`FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YourSuiteName")`
+### 寫入方式`FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "YourSuiteName")`
 
 * 測項：圖片
   * 直接寫入圖片檔➔ 成功寫入 **讀取端**：成功讀取✅
-
-
 
 ## 目前作法
 
@@ -126,9 +119,7 @@ fileURL.stopAccessingSecurityScopedResource()
 
 * 第2種：**處理端 = 呈現端\(App端\)**
 
-  在接收端利用`FileObject`物件陣列，來當作在App端顯示所有資料的依據  
+  在接收端利用`FileObject`物件陣列，來當作在App端顯示所有資料的依據
 
 * 第1種：**處理端 = 接收端\(extension\)** 因為item的URL必須在接收端處理，所以就不同類型的檔案必須先做資料處理，處理完寫入Group space
-
-
 
