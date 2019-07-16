@@ -23,9 +23,7 @@
 
 
 
-![](../../.gitbook/assets/detailed_communication_2x%20%282%29.png)
-
-
+![APPLE&#x63D0;&#x4F9B;&#x7684;extension&#x67B6;&#x69CB;&#x5716;](../../.gitbook/assets/detailed_communication_2x%20%282%29.png)
 
 * Host app：user透過哪個app（也可以是本機照片或本機檔案）分享檔案給我的app，稱之
 * App extension：由extension負責**接收**傳進來的檔案
