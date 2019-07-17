@@ -25,10 +25,10 @@
 
 ![APPLE&#x63D0;&#x4F9B;&#x7684;extension&#x67B6;&#x69CB;&#x5716;](../../.gitbook/assets/detailed_communication_2x%20%282%29.png)
 
-* Host app：user透過哪個app（也可以是本機照片或本機檔案）分享檔案給我的app，稱之
-* App extension：由extension負責**接收**傳進來的檔案
-* Containing app：主要開發的project app，負責將資料如何對外呈現
-* Shared resources:：extension與Containing app透過蘋果提供的一個group space，透過這個space來讓Containing app存取extension所接收到的資源
+* **Host app**：user透過哪個app（可以是本機照片或本機檔案）分享檔案到我的app，而透過的這個app稱之
+* **App extension**：由extension負責**接收**從Host app傳進來的檔案
+* **Containing app**：主要開發的project app，負責將資料如何對外呈現
+* **Shared resources**：extension與Containing app透過蘋果提供的一個group space，透過這個space來讓Containing app存取extension所接收到的**當**
 
 ## Share Extension介紹
 
@@ -38,7 +38,9 @@
 
 ### 決定Share Extension出現在分享清單中的關鍵
 
-要看APP允許接受什麼類型的內容，可選擇支援類型如下：
+![](../../.gitbook/assets/img_2205.PNG)
+
+圖中就是share extension呈現的畫面，要讓share extension出現在分享畫面的話，就要看APP允許接受什麼類型的內容，可選擇支援類型如下：
 
 * 可經由share extension自己目錄底下`plist`檔，調整欄位**NSExtension** ➔ **NSExtensionAttributes** 改為**Dictionary** Type ➔ 新增下列欲選取的`key`
   * `NSExtensionActivationSupportsAttachmentsWithMaxCount`
@@ -73,7 +75,7 @@
 
 
 
-### 怎麼將資料傳給Containing App
+### **extension收到檔案後，如何傳給Containing App？**
 
 蘋果提供一項叫**App Groups**的服務，允許開發者能夠在自己的App之間傳遞資料，可透過下列三種方式
 
@@ -83,7 +85,7 @@
 
 因此，開發者使用哪個指令操作，取資料就需要鍵值或路徑，而這個相對於在APP Group服務底下稱為group name，這也是開發者可以自行定義的
 
-### 建立與啟用App Group
+## 建立與啟用App Group
 
 建立Target
 
